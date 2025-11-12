@@ -44,5 +44,17 @@
             'fullname' => 'Шварцнегер Арнольд Густавович',
             'job' => 'babysitter',
         ],
+        [
+            'fullname' => 'Петрова Ираида Федоровна',
+            'job' => 'manager',
+        ],
+        [
+            'fullname' => 'Фролова Надежда Георгиевна',
+            'job' => 'designer',
+        ],
+        [
+            'fullname' => 'Абрамова Марина Алексеевна',
+            'job' => 'frontend-developer',
+        ],
     ];
 ?>

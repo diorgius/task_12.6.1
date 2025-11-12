@@ -1,9 +1,9 @@
 <?php
 require 'data.php';
 $snp = 'Иванов Иван Иванович';
-$surname = 'Иванов';
-$name = 'Иван';
-$patronomyc = 'Иванович';
+$surname = 'ИвАнов';
+$name = 'ИВАН';
+$patronomyc = 'иВанОвич';
 
 // функция разбиения ФИО
 function getPartsFromFullname($snp)
@@ -73,7 +73,26 @@ function getGenderDescription($persons_array)
     echo '----------------------------------------<br>';
     echo 'Мужчиины - ' . round($all_men_count / $all_gender_count * 100, 1) . '%<br>';
     echo 'Женщины - ' . round($all_woman_count / $all_gender_count * 100, 1) . '%<br>';
-    echo 'Не удалось определить - ' . round($all_man_count / $all_gender_count * 100, 1) . '%';
+    echo 'Не удалось определить - ' . round($all_man_count / $all_gender_count * 100, 1) . '%<br>';
 }
 
 getGenderDescription($example_persons_array);
+
+// функция идеального подбора пары
+function getPerfectPartner($surname, $name, $patronomyc, $persons_array) 
+{
+    $surname = mb_convert_case($surname, MB_CASE_TITLE_SIMPLE);
+    $name = mb_convert_case($name, MB_CASE_TITLE_SIMPLE);
+    $patronomyc = mb_convert_case($patronomyc, MB_CASE_TITLE_SIMPLE);
+    $snp = getFullnameFromParts($surname, $name, $patronomyc);
+    $gender = getGenderFromName($snp);
+    do {
+        $random_man = $persons_array[array_rand($persons_array, 1)]['fullname'];
+        $gender_check = getGenderFromName($random_man);
+    } while ($gender_check === $gender || $gender_check === 0);
+    echo '<h4>Идеальный подбор пары:</h4>';
+    echo '------------------------------------------------------------<br>';
+    echo getShortName($snp) . ' + ' . getShortName($random_man) . ' = идеально на ' . round(mt_rand(50000,100000) /1000, 2) . "% \u{1F60D}";
+}
+
+getPerfectPartner($surname, $name, $patronomyc, $example_persons_array);
