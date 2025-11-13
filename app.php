@@ -106,8 +106,8 @@ function getPerfectPartnerRandom($persons_array)
         $random_man_second = $persons_array[array_rand($persons_array, 1)]['fullname'];
         $gender_check = getGenderFromName($random_man_second);
     } while ($gender_check === $gender || $gender_check === 0);
-    echo '<h4>Идеальный подбор пары:</h4>';
-    echo '------------------------------------------------------------<br>';
+    echo '<h4>Идеальный подбор пары с выбором обоих человек из массива:</h4>';
+    echo '----------------------------------------------------------------------<br>';
     echo getShortName($random_man_first) . ' + ' . getShortName($random_man_second) . ' = идеально на ' . round(mt_rand(50000,100000) /1000, 2) . "% \u{1F60D}";
 }
 
