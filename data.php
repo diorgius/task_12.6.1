@@ -17,6 +17,18 @@
             'job' => 'fullstack-developer',
         ],
         [
+            'fullname' => 'Громова Александра Ивановна',
+            'job' => 'designer',
+        ],
+        [
+            'fullname' => 'Петров Ираклий Галадрионович',
+            'job' => 'backend-developer',
+        ],
+        [
+            'fullname' => 'Галадрионов Петр Ираклиевич',
+            'job' => 'devops',
+        ],
+        [
             'fullname' => 'Славин Семён Сергеевич',
             'job' => 'analyst',
         ],
@@ -37,7 +49,7 @@
             'job' => 'analyst',
         ],
         [
-            'fullname' => 'Бардо Жаклин Фёдоровна',
+            'fullname' => 'Бардо Генриета Фёдоровна',
             'job' => 'android-developer',
         ],
         [
@@ -55,6 +67,18 @@
         [
             'fullname' => 'Абрамова Марина Алексеевна',
             'job' => 'frontend-developer',
+        ],
+        [
+            'fullname' => 'Сидоров Петр Евгеньевич',
+            'job' => 'backend-developer',
+        ],
+        [
+            'fullname' => 'Николаев Николай Николаевич',
+            'job' => 'designer',
+        ],
+        [
+            'fullname' => 'Иванько Сергей Александрович',
+            'job' => 'fullstack-developer',
         ],
     ];
 ?>
